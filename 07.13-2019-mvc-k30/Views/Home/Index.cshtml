@@ -1,0 +1,350 @@
+﻿<!-- main of the page -->
+<main id="main">
+    <!-- banner slide of the page -->
+    <section class="banner-slide banner-sec">
+        <!-- slide of the page -->
+        <div class="slide">
+            <div class="banner-holder bg-full" style="background-image: url(../Uploads/@ViewBag.topSection.Image)">
+                <div class="container holder">
+                    <div class="row">
+                        <div class="col-xs-12 caption fwMedium text-center">
+                            <h1 class="fwMedium">@ViewBag.topSection.Header</h1>
+                            <p>@ViewBag.topSection.Description</p>
+                            <a href="#" class="btn-primary text-uppercase">@ViewBag.topSection.btnText</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a href="#about" class="next-sec"></a>
+        </div>
+    </section>
+    <!-- about sec of the page -->
+    <section id="about" class="about-sec container">
+        <div class="row">
+            <div class="col-xs-12 col-md-5 header">
+                <h2 class="heading fwExtra-Light">We are the best<br class="hidden-xs hidden-sm"> of financal</h2>
+                <p>Lorem Ipsum is simply dummy text of the printing and<br class="hidden-xs hidden-sm"> typesetting industry. Lorem Ipsum has been the<br class="hidden-xs hidden-sm"> industry's standard dummy text ever since the 1500s.</p>
+                <a href="about-us.html" class="btn-primary shadow fwSemi-bold text-uppercase">read more</a>
+            </div>
+            <div class="col-xs-12 col-md-7">
+                <!-- financial list of the page -->
+                <ul class="list-unstyled financial-list">
+                    @foreach (var item in ViewBag.section2)
+                    {
+                        <li>
+                            <span class="icon ti-server"></span>
+                            <div class="financial-list-detail">
+                                <h3 class="heading3 fwRegular">@item.IconHeader</h3>
+                                <p>It is a long established fact that a reader will be distracted by the readable content.</p>
+                            </div>
+                        </li>
+                    }
+
+
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!-- choose sec of the page -->
+    <section class="choose-sec bg-lightGrey">
+        <div class="col pull-right">
+            <div class="img-holder">
+                <img src="images/img53.jpg" class="img-responsive" alt="img-description">
+            </div>
+        </div>
+        <div class="col v2 pull-left">
+            <!-- choose detail of the page -->
+            <div class="choose-detail pull-right">
+                <h2 class="heading fwExtra-Light">Why Choose Us.</h2>
+                <ul class="list-unstyled choose-list pull-right">
+                    <li>
+                        <h3 class="heading4"><span class="check ti-check"></span>We are responsible</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer.</p>
+                    </li>
+                    <li>
+                        <h3 class="heading4"><span class="check ti-check"></span>Our client are satisfied</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer.</p>
+                    </li>
+                    <li>
+                        <h3 class="heading4"><span class="check ti-check"></span>Reasonable prices</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer.</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!-- service sec of the page -->
+    <section class="service-sec container">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="header2 text-center">
+                    <h2 class="heading fwExtra-Light">Services</h2>
+                    <p>Web hosting packages provide quality web hosting with unlimited resources</p>
+                </div>
+                <!-- service slide of the page -->
+                <div class="service-slide">
+                    <!-- service col of the page -->
+                    <div class="service-col text-center">
+                        <span class="icon icon-business1"></span>
+                        <h3 class="heading4"><a href="service-detail.html">Business Strategy</a></h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy</p>
+                        <a href="service-detail.html" class="btn-secondary text-uppercase fwSemi-bold">view services</a>
+                    </div>
+                    <!-- service col of the page -->
+                    <div class="service-col text-center">
+                        <span class="icon icon-tax"></span>
+                        <h3 class="heading4"><a href="service-detail.html">Tax Consulting</a></h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy</p>
+                        <a href="service-detail.html" class="btn-secondary text-uppercase fwSemi-bold">view services</a>
+                    </div>
+                    <!-- service col of the page -->
+                    <div class="service-col text-center">
+                        <span class="icon icon-analysis"></span>
+                        <h3 class="heading4"><a href="service-detail.html">Financical Analysis</a></h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy</p>
+                        <a href="service-detail.html" class="btn-secondary text-uppercase fwSemi-bold">view services</a>
+                    </div>
+                    <!-- service col of the page -->
+                    <div class="service-col text-center">
+                        <span class="icon icon-tax"></span>
+                        <h3 class="heading4"><a href="service-detail.html">Tax Consulting</a></h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy</p>
+                        <a href="service-detail.html" class="btn-secondary text-uppercase fwSemi-bold">view services</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- testimonail sec of the page -->
+    <section class="testimonial-sec bg-blue">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="header2">
+                        <h2 class="text-capitalize fwExtra-Light heading">Our Client’s Reviews</h2>
+                        <p>We bring together everything from balances and bills to your credit score and more</p>
+                    </div>
+                    <!-- testimonail slider of the page -->
+                    <div class="testimonial-slider">
+                        <!-- slide of the page -->
+                        <div class="slide">
+                            <div class="header">
+                                <h3 class="heading4 fwRegular">In today's world, its important to harness technology to.</h3>
+                                <p>“The String is up and it looks amazing! I couldn’t be more pleased with it so thank you very much for all your help, and for ensuring it reached us.”</p>
+                            </div>
+                            <footer class="testimonial-descrip">
+                                <div class="author-block fw pull-left">
+                                    <div class="img-holder pull-left">
+                                        <a href="#"><img src="images/img54.png" class="img-responsive" alt="image description"></a>
+                                    </div>
+                                    <div class="testimonial-detail">
+                                        <h3 class="heading9 fwRegular text-capitalize"><a href="#">Andrew</a></h3>
+                                        <span class="desination">Evanto</span>
+                                    </div>
+                                </div>
+                                <ul class="list-unstyled ratting-list">
+                                    <li><a href="#" class="blue fas fa-star"></a></li>
+                                    <li><a href="#" class="blue fas fa-star"></a></li>
+                                    <li><a href="#" class="blue fas fa-star"></a></li>
+                                    <li><a href="#" class="blue fas fa-star"></a></li>
+                                    <li><a href="#" class="light-grey fas fa-star"></a></li>
+                                </ul>
+                            </footer>
+                        </div>
+                        <!-- slide of the page -->
+                        <div class="slide">
+                            <div class="header">
+                                <h3 class="heading4 fwRegular">In today's world, its important to harness technology to.</h3>
+                                <p>“The String is up and it looks amazing! I couldn’t be more pleased with it so thank you very much for all your help, and for ensuring it reached us.”</p>
+                            </div>
+                            <footer class="testimonial-descrip">
+                                <div class="author-block fw pull-left">
+                                    <div class="img-holder pull-left">
+                                        <a href="#"><img src="images/img55.png" class="img-responsive" alt="image description"></a>
+                                    </div>
+                                    <div class="testimonial-detail">
+                                        <h3 class="heading9 fwRegular text-capitalize"><a href="#">John Wick</a></h3>
+                                        <span class="desination">Evanto</span>
+                                    </div>
+                                </div>
+                                <ul class="list-unstyled ratting-list">
+                                    <li><a href="#" class="blue fas fa-star"></a></li>
+                                    <li><a href="#" class="blue fas fa-star"></a></li>
+                                    <li><a href="#" class="blue fas fa-star"></a></li>
+                                    <li><a href="#" class="blue fas fa-star"></a></li>
+                                    <li><a href="#" class="light-grey fas fa-star"></a></li>
+                                </ul>
+                            </footer>
+                        </div>
+                        <!-- slide of the page -->
+                        <div class="slide">
+                            <div class="header">
+                                <h3 class="heading4 fwRegular">In today's world, its important to harness technology to.</h3>
+                                <p>“The String is up and it looks amazing! I couldn’t be more pleased with it so thank you very much for all your help, and for ensuring it reached us.”</p>
+                            </div>
+                            <footer class="testimonial-descrip">
+                                <div class="author-block fw pull-left">
+                                    <div class="img-holder pull-left">
+                                        <a href="#"><img src="images/img56.png" class="img-responsive" alt="image description"></a>
+                                    </div>
+                                    <div class="testimonial-detail">
+                                        <h3 class="heading9 text-capitalize"><a href="#">Rosemary</a></h3>
+                                        <span class="desination">Evanto</span>
+                                    </div>
+                                </div>
+                                <ul class="list-unstyled ratting-list">
+                                    <li><a href="#" class="blue fas fa-star"></a></li>
+                                    <li><a href="#" class="blue fas fa-star"></a></li>
+                                    <li><a href="#" class="blue fas fa-star"></a></li>
+                                    <li><a href="#" class="blue fas fa-star"></a></li>
+                                    <li><a href="#" class="light-grey fas fa-star"></a></li>
+                                </ul>
+                            </footer>
+                        </div>
+                        <!-- slide of the page -->
+                        <div class="slide">
+                            <div class="header">
+                                <h3 class="heading4 fwRegular">In today's world, its important to harness technology to.</h3>
+                                <p>“The String is up and it looks amazing! I couldn’t be more pleased with it so thank you very much for all your help, and for ensuring it reached us.”</p>
+                            </div>
+                            <footer class="testimonial-descrip">
+                                <div class="author-block fw pull-left">
+                                    <div class="img-holder pull-left">
+                                        <a href="#"><img src="images/img55.png" class="img-responsive" alt="image description"></a>
+                                    </div>
+                                    <div class="testimonial-detail">
+                                        <h3 class="heading9 fwRegular text-capitalize"><a href="#">John Wick</a></h3>
+                                        <span class="desination">Evanto</span>
+                                    </div>
+                                </div>
+                                <ul class="list-unstyled ratting-list">
+                                    <li><a href="#" class="blue fas fa-star"></a></li>
+                                    <li><a href="#" class="blue fas fa-star"></a></li>
+                                    <li><a href="#" class="blue fas fa-star"></a></li>
+                                    <li><a href="#" class="blue fas fa-star"></a></li>
+                                    <li><a href="#" class="light-grey fas fa-star"></a></li>
+                                </ul>
+                            </footer>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- project sec of the page -->
+    <section class="project-sec bg-lightGrey">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 header2 text-center">
+                    <h2 class="heading fwExtra-Light text-capitalize">Our Project</h2>
+                    <p>We stay on top of your industry by being experts in your</p>
+                </div>
+            </div>
+        </div>
+        <!-- project holder of the page -->
+        <div class="project-holder">
+            <!-- project block of the page -->
+            <figure class="project-block overlay">
+                <img src="~/images/img57.jpg" alt="image description" class="img-responsive">
+                <figcaption class="contant-holder bg-blue fwRegular white">
+                    <h2 class="heading6"><a href="project-detail-fullwidth.html">Science and art city at sunset</a></h2>
+                    <p>The point of using Lorem Ipsum is that it has a</p>
+                </figcaption>
+            </figure>
+            <!-- project block of the page -->
+            <figure class="project-block overlay">
+                <img src="images/img58.jpg" alt="image description" class="img-responsive">
+                <figcaption class="contant-holder bg-blue fwRegular white">
+                    <h2 class="heading6"><a href="project-detail-fullwidth.html">Science and art city at sunset</a></h2>
+                    <p>The point of using Lorem Ipsum is that it has a</p>
+                </figcaption>
+            </figure>
+            <!-- project block of the page -->
+            <figure class="project-block overlay">
+                <img src="images/img59.jpg" alt="image description" class="img-responsive">
+                <figcaption class="contant-holder bg-blue fwRegular white">
+                    <h2 class="heading6"><a href="project-detail-fullwidth.html">Science and art city at sunset</a></h2>
+                    <p>The point of using Lorem Ipsum is that it has a</p>
+                </figcaption>
+            </figure>
+            <!-- project block of the page -->
+            <figure class="project-block overlay">
+                <img src="images/img60.jpg" alt="image description" class="img-responsive">
+                <figcaption class="contant-holder bg-blue fwRegular white">
+                    <h2 class="heading6"><a href="project-detail-fullwidth.html">Science and art city at sunset</a></h2>
+                    <p>The point of using Lorem Ipsum is that it has a</p>
+                </figcaption>
+            </figure>
+        </div>
+    </section>
+    <!-- post sec of the page -->
+    <section class="post-sec container">
+        <div class="row">
+            <div class="col-xs-12">
+                <h2 class="heading text-capitalize pull-left fwExtra-Light">Recent News</h2>
+                <a href="#" class="btn-secondary grey pull-right fwSemi-bold text-uppercase">see all news</a>
+            </div>
+            <div class="col-xs-12 col-sm-6">
+                <!-- post col of the page -->
+                <div class="post-col">
+                    <div class="img-holder overlay">
+                        <img src="images/img61.jpg" class="img-responsive" alt="image description">
+                        <a href="blog-detail.html"></a>
+                    </div>
+                    <h3 class="heading6 fwRegular"><a href="#">F&O cues: Nifty 11100 Put adds 4.6 lakh shares in Open Interest</a></h3>
+                    <time class="time text-uppercase" datetime="2019-01-23">Thurday, 25th January 2018</time>
+                    <a href="blog-detail.html" class="btn-secondary fwSemi-bold text-uppercase">Continue Reading</a>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6">
+                <!-- post col of the page -->
+                <div class="post-col">
+                    <div class="img-holder overlay">
+                        <img src="images/img62.jpg" class="img-responsive" alt="image description">
+                        <a href="blog-detail.html"></a>
+                    </div>
+                    <h3 class="heading6 fwRegular"><a href="#">Bharat Bijlee touched 52-week high on strong Q3 numbers</a></h3>
+                    <time class="time text-uppercase" datetime="2019-01-23">Thurday, 25th January 2018</time>
+                    <a href="blog-detail.html" class="btn-secondary fwSemi-bold text-uppercase">Continue Reading</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- submit sec of the page -->
+    <section class="submit-sec bg-parallax" style="background-image: url(images/img63.jpg);">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="header2 text-center">
+                        <h2 class="heading text-capitalize fwExtra-Light">Have A Questions?</h2>
+                        <p>Economic and analytic services provided by the finance industry</p>
+                    </div>
+                    <!-- contact form of the page -->
+                    <form class="contact-form text-center">
+                        <fieldset>
+                            <div class="form-group">
+                                <div class="col">
+                                    <input type="text" class="form-control" placeholder="Your Name:*">
+                                </div>
+                                <div class="col">
+                                    <input type="text" class="form-control" placeholder="Phone Number:*">
+                                </div>
+                                <div class="col">
+                                    <select>
+                                        <option value="0">Services</option>
+                                        <option value="1">Services</option>
+                                        <option value="2">Services</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <textarea class="form-control" placeholder="Message:*"></textarea>
+                            </div>
+                            <button type="submit" class="btn-primary bg-white fwSemi-bold text-uppercase">submit</button>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>

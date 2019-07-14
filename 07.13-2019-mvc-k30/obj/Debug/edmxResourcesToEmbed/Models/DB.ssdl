@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="K30FinanceDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Categories">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="Clients">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ClientFullName" Type="nvarchar" MaxLength="150" />
+    <Property Name="Email" Type="nvarchar" MaxLength="250" />
+    <Property Name="Message" Type="nvarchar" MaxLength="500" />
+    <Property Name="Status" Type="tinyint" />
+  </EntityType>
+  <EntityType Name="OurProjectTB">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Header" Type="nvarchar" MaxLength="250" />
+    <Property Name="miniDescription" Type="nvarchar" MaxLength="400" />
+    <Property Name="ProjectImage" Type="nvarchar" MaxLength="600" />
+    <Property Name="Subheader" Type="nvarchar" MaxLength="250" />
+    <Property Name="SubDescription" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="RecentNewsTB">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BlogImage" Type="nvarchar" MaxLength="600" />
+    <Property Name="Header" Type="nvarchar" MaxLength="600" />
+    <Property Name="Description" Type="nvarchar(max)" />
+    <Property Name="category_Id" Type="int" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="EditDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Section2Divs">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Icons" Type="nvarchar" MaxLength="100" />
+    <Property Name="Header" Type="nvarchar" MaxLength="250" />
+    <Property Name="Description" Type="nvarchar" MaxLength="500" />
+    <Property Name="IconHeader" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="IconDesctription" Type="nvarchar" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="Section3Divs">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Header" Type="nvarchar" MaxLength="250" />
+    <Property Name="SubHeader" Type="nvarchar" MaxLength="250" />
+    <Property Name="Description" Type="nvarchar" MaxLength="500" />
+    <Property Name="Photo" Type="nvarchar" MaxLength="600" />
+  </EntityType>
+  <EntityType Name="Section4Divs">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Header" Type="nvarchar" MaxLength="250" />
+    <Property Name="TopDescription" Type="nvarchar" MaxLength="300" />
+    <Property Name="Icons" Type="nvarchar" MaxLength="100" />
+    <Property Name="IconHeader" Type="nvarchar" MaxLength="250" />
+    <Property Name="IconDescription" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="Section5Divs">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Header" Type="nvarchar" MaxLength="250" />
+    <Property Name="Description" Type="nvarchar" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="Settings">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Adress" Type="nvarchar" MaxLength="300" />
+    <Property Name="Phone" Type="nvarchar" MaxLength="20" />
+    <Property Name="OpenDate" Type="datetime" />
+    <Property Name="CloseDate" Type="datetime" />
+    <Property Name="AdminEmail" Type="nvarchar" MaxLength="100" />
+    <Property Name="AdminPassword" Type="nvarchar" MaxLength="250" />
+    <Property Name="fbLink" Type="nvarchar" MaxLength="300" />
+    <Property Name="instaLink" Type="nvarchar" MaxLength="300" />
+    <Property Name="twitterLink" Type="nvarchar" MaxLength="300" />
+    <Property Name="Logo" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="TopSection1">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Image" Type="nvarchar" MaxLength="600" />
+    <Property Name="Header" Type="nvarchar" MaxLength="250" />
+    <Property Name="Description" Type="nvarchar(max)" />
+    <Property Name="btnText" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <Association Name="FK_RecentNewsTB_Categories">
+    <End Role="Categories" Type="Self.Categories" Multiplicity="0..1" />
+    <End Role="RecentNewsTB" Type="Self.RecentNewsTB" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Categories">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="RecentNewsTB">
+        <PropertyRef Name="category_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RecentNewsTB_Categories1">
+    <End Role="Categories" Type="Self.Categories" Multiplicity="0..1" />
+    <End Role="RecentNewsTB" Type="Self.RecentNewsTB" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Categories">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="RecentNewsTB">
+        <PropertyRef Name="category_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="K30FinanceDBModelStoreContainer">
+    <EntitySet Name="Categories" EntityType="Self.Categories" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Clients" EntityType="Self.Clients" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="OurProjectTB" EntityType="Self.OurProjectTB" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RecentNewsTB" EntityType="Self.RecentNewsTB" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Section2Divs" EntityType="Self.Section2Divs" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Section3Divs" EntityType="Self.Section3Divs" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Section4Divs" EntityType="Self.Section4Divs" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Section5Divs" EntityType="Self.Section5Divs" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Settings" EntityType="Self.Settings" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TopSection1" EntityType="Self.TopSection1" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_RecentNewsTB_Categories" Association="Self.FK_RecentNewsTB_Categories">
+      <End Role="Categories" EntitySet="Categories" />
+      <End Role="RecentNewsTB" EntitySet="RecentNewsTB" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RecentNewsTB_Categories1" Association="Self.FK_RecentNewsTB_Categories1">
+      <End Role="Categories" EntitySet="Categories" />
+      <End Role="RecentNewsTB" EntitySet="RecentNewsTB" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
