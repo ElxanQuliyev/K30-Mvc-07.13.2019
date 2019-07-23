@@ -1,0 +1,70 @@
+﻿@model _07._13_2019_mvc_k30.Models.SectionDivs2Right
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>SectionDivs2Right</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model.Id)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Header, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Header, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Header, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Description, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Description, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Icons, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Icons, new { htmlAttributes = new { id="iconForm",@class = "form-control d-none" } })
+                @Html.ValidationMessageFor(model => model.Icons, "", new { @class = "text-danger" })
+                <div class="section2Icons">
+                    <i class="fab fa-500px"></i>
+                    <i class="fas fa-angry"></i>
+                    <i class="far fa-address-card"></i>
+                    <i class="fas fa-archway"></i>
+                    <i class="fab fa-apper"></i>
+                    <i class="fab fa-bity"></i>
+                    <i class="fas fa-broadcast-tower"></i>
+                    <i class="fas fa-cannabis"></i>
+                    <i class="fab fa-affiliatetheme"></i>
+                    <i class="far fa-smile-beam"></i>
+                    <i class="fab fa-cc-visa"></i>
+                    <i class="fas fa-cubes"></i>
+                    <i class="fas fa-couch"></i>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

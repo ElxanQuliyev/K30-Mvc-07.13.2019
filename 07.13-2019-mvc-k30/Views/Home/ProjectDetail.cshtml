@@ -1,0 +1,45 @@
+﻿@using _07._13_2019_mvc_k30.Models
+
+@{
+    ViewBag.Title = "ProjectDetail";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- banner sec of the page -->
+<section class="banner-sec v2 bg-lightGrey">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-6">
+                <h2 class="heading5 text-capitalize fwLight26">Our Project</h2>
+            </div>
+            <div class="col-xs-6">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb list-unstyled text-capitalize fwLight">
+                        <li class="breadcrumb-item"><a href="index-2.html">Home</a></li>
+                        <li class="breadcrumb-item">/</li>
+                        <li class="breadcrumb-item active" aria-current="page">Our project</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- project sec of the page -->
+<section class="project-sec detail">
+    <div class="container">
+        <div class="row">
+            @{ OurProjectTB our = ViewBag.ourpro;}
+            <div class="col-xs-12 content-detail fwLight">
+                <div class="img-holder">
+                    <img src="@our.ProjectImage" alt="image description" class="img-responsive"/>
+                </div>
+                <div class="wrap">
+                    <h2 class="heading2 pull-left fwLight">@our.Header</h2>
+                </div>
+
+                <p>@our.Description</p>
+            </div>
+
+        </div>
+    </div>
+</section>

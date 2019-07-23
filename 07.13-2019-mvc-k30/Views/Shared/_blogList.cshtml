@@ -1,0 +1,29 @@
+﻿@using _07._13_2019_mvc_k30.ViewModels.Default
+@model DefaultViewModel
+<!-- post sec of the page -->
+<section class="post-sec container">
+    <div class="row">
+        <div class="col-xs-12">
+            <h2 class="heading text-capitalize pull-left fwExtra-Light">Recent News</h2>
+            <a href="#" class="btn-secondary grey pull-right fwSemi-bold text-uppercase">see all news</a>
+        </div>
+
+        @foreach (var blogItem in Model.blogs)
+        {
+            <div class="col-xs-12 col-sm-6">
+                <!-- post col of the page -->
+                <div class="post-col">
+                    <div class="img-holder overlay">
+                        <img src="@blogItem.BlogImage" class="img-responsive" alt="image description">
+                        <a href="blog-detail.html">@blogItem.Header</a>
+                    </div>
+                    <h3 class="heading6 fwRegular"><a href="#">@blogItem.Description</a></h3>
+                    <time class="time text-uppercase" datetime="2019-01-23">@blogItem.CreateDate</time>
+                    <a href="@Url.Action("BlogDetail","Home",new { id=blogItem.Id})" class="btn-secondary fwSemi-bold text-uppercase">Continue Reading</a>
+                </div>
+            </div>
+        }
+
+
+    </div>
+</section>

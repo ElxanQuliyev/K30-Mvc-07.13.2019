@@ -16,8 +16,9 @@ namespace _07._13_2019_mvc_k30
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
-            );
+                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional },
+                 namespaces: new string[] { "_07._13_2019_mvc_k30.Controllers" }
+                );
         }
     }
 }

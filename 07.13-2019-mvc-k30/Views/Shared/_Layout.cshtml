@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿@using _07._13_2019_mvc_k30.Models
+<!DOCTYPE html>
 <html lang="en-us">
 
 <!-- Mirrored from htmlbeans.com/html/zuka-finance/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 13 Jul 2019 13:57:28 GMT -->
@@ -130,7 +131,7 @@
                             <!-- nav of the page -->
                             <nav id="nav" class="pull-left hb-navigation">
                                 <ul class="list-unstyled text-capitalize">
-                                    <li class="active"><a href="index-2.html">home</a></li>
+                                    <li class="active"><a href="@Url.Action("Index","Home")">home</a></li>
                                     <li><a href="about-us.html">About</a></li>
                                     <li class="menu-item-has-children">
                                         <a href="javascript:void(0);">Services <i class="fas fa-angle-down pull-right hidden visible-xs visible-sm"></i></a>
@@ -157,6 +158,19 @@
                                         </ul>
                                     </li>
                                     <li><a href="contact-us.html">Contact us</a></li>
+                                    @if (Session["loggedUser"] == null)
+                                    {
+                                        <li><a href="@Url.Action("Login","UserAccount")">Login</a></li>
+
+                                    }
+                                    else
+                                    {
+                                        User activeUser = (User)Session["loggedUser"];
+                                        <li><a href="@Url.Action("Index","UserAccount" ,new { id=activeUser.Id})">@activeUser.Username</a></li>
+                                        <li><a href="@Url.Action("Logout","UserAccount")">Logout</a></li>
+                                    }
+
+
                                     <li class="visible-xs hidden"><a class="lightbox" href="#popup1">Get a Quote</a></li>
                                 </ul>
                             </nav>

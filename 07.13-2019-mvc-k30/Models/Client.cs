@@ -18,6 +18,8 @@ namespace _07._13_2019_mvc_k30.Models
         public string ClientFullName { get; set; }
         public string Email { get; set; }
         public string Message { get; set; }
+        public string Header { get; set; }
+
         public Nullable<byte> Status { get; set; }
     }
 }

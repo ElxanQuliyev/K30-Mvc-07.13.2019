@@ -16,9 +16,7 @@ namespace _07._13_2019_mvc_k30.Models
     {
         public int Id { get; set; }
         public string Header { get; set; }
-        public string miniDescription { get; set; }
+        public string Description { get; set; }
         public string ProjectImage { get; set; }
-        public string Subheader { get; set; }
-        public string SubDescription { get; set; }
     }
 }

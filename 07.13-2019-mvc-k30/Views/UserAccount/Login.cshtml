@@ -1,0 +1,57 @@
+﻿
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+    <div class="container">
+        <!-- page-wrapper Start-->
+        <div class="page-wrapper">
+            <div class="container-fluid p-0">
+                <!-- login page start-->
+                <div class="authentication-main">
+                    <div class="row">
+                        <div class="col-md-6 col-md-push-3">
+                            <div class="auth-innerright">
+                                <div class="authentication-box">
+                                    <div class="text-center"><img src="../assets/images/endless-logo.png" alt=""></div>
+                                    <div class="card mt-4">
+                                        <div class="card-body">
+                                            <div class="text-center">
+                                                <h4>LOGIN</h4>
+                                                <h6>Enter your Username and Password </h6>
+                                            </div>
+                                            <form class="theme-form" method="post" action="@Url.Action("Login","UserAccount")">
+                                                <div class="form-group">
+                                                    <label class="col-form-label pt-0">User Name</label>
+                                                    <input class="form-control" name="Username" type="text" required="">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="col-form-label">Password</label>
+                                                    <input name="Password" class="form-control" type="password" required="">
+                                                </div>
+                                                <div class="checkbox p-0">
+                                                    <input id="checkbox1" type="checkbox">
+                                                    <label for="checkbox1">Remember me</label>
+                                                </div>
+                                                <div class="form-group form-row mt-3 mb-0">
+                                                    <button class="btn btn-primary btn-block" type="submit">Login</button>
+                                                </div>
+                                                <div class="form-group form-row mt-3 mb-0">
+                                                    <a class="btn btn-success btn-block" href="@Url.Action("Register","UserAccount")">
+                                                        Register
+                                                    </a>
+                                                </div>
+                                             
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- login page end-->
+            </div>
+        </div>
+
+    </div>

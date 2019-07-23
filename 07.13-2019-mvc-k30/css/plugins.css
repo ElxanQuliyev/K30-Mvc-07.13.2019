@@ -44,7 +44,10 @@ body.compensate-for-scrollbar {
   right: 0;
   top: 0
 }
-
+#iconsMain {
+    color: aqua;
+    font-size: 2em;
+}
 .fancybox-outer {
   -webkit-overflow-scrolling: touch;
   overflow-y: auto

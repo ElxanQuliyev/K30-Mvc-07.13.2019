@@ -44,16 +44,13 @@
     <NavigationProperty Name="Category" Relationship="Self.FK_RecentNewsTB_Categories" FromRole="RecentNewsTB" ToRole="Categories" />
     <NavigationProperty Name="Category1" Relationship="Self.FK_RecentNewsTB_Categories1" FromRole="RecentNewsTB" ToRole="Categories" />
   </EntityType>
-  <EntityType Name="Section2Divs">
+  <EntityType Name="Section2DivsLeft">
     <Key>
-      <PropertyRef Name="Id" />
+      <PropertyRef Name="ID" />
     </Key>
-    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="Icons" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-    <Property Name="Header" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Heder" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
     <Property Name="Description" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
-    <Property Name="IconHeader" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="IconDesctription" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityType Name="Section3Divs">
     <Key>
@@ -84,6 +81,15 @@
     <Property Name="Header" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
     <Property Name="Description" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
   </EntityType>
+  <EntityType Name="SectionDivs2Right">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Header" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Icons" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
   <EntityType Name="Setting">
     <Key>
       <PropertyRef Name="Id" />
@@ -99,16 +105,6 @@
     <Property Name="instaLink" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
     <Property Name="twitterLink" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
     <Property Name="Logo" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
-  </EntityType>
-  <EntityType Name="sysdiagram">
-    <Key>
-      <PropertyRef Name="diagram_id" />
-    </Key>
-    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="principal_id" Type="Int32" Nullable="false" />
-    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="version" Type="Int32" />
-    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
   </EntityType>
   <EntityType Name="TopSection1">
     <Key>
@@ -149,12 +145,12 @@
     <EntitySet Name="Clients" EntityType="Self.Client" />
     <EntitySet Name="OurProjectTBs" EntityType="Self.OurProjectTB" />
     <EntitySet Name="RecentNewsTBs" EntityType="Self.RecentNewsTB" />
-    <EntitySet Name="Section2Divs" EntityType="Self.Section2Divs" />
+    <EntitySet Name="Section2DivsLeft" EntityType="Self.Section2DivsLeft" />
     <EntitySet Name="Section3Divs" EntityType="Self.Section3Divs" />
     <EntitySet Name="Section4Divs" EntityType="Self.Section4Divs" />
     <EntitySet Name="Section5Divs" EntityType="Self.Section5Divs" />
+    <EntitySet Name="SectionDivs2Right" EntityType="Self.SectionDivs2Right" />
     <EntitySet Name="Settings" EntityType="Self.Setting" />
-    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
     <EntitySet Name="TopSection1" EntityType="Self.TopSection1" />
     <AssociationSet Name="FK_RecentNewsTB_Categories" Association="Self.FK_RecentNewsTB_Categories">
       <End Role="Categories" EntitySet="Categories" />

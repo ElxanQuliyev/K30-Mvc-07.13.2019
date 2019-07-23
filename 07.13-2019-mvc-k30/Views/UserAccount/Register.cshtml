@@ -1,0 +1,72 @@
+﻿
+@{
+    ViewBag.Title = "Register";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+    <div class="container">
+        <!-- page-wrapper Start-->
+        <div class="page-wrapper">
+            <div class="container-fluid p-0">
+                <!-- login page start-->
+                <div class="authentication-main">
+                    <div class="row">
+                        <div class="col-md-6 col-md-push-3">
+                            <div class="auth-innerright">
+                                <div class="authentication-box">
+                                    <div class="text-center"><img src="../assets/images/endless-logo.png" alt=""></div>
+                                    <div class="card mt-4">
+                                        <div class="card-body">
+                                            <div class="text-center">
+                                                <h4>Register</h4>
+                                                @if (ViewBag.Error != null)
+                                                {
+                                                    <div style="background:red;color:#fff" class="alert alert-danger" role="alert">
+                                                        @ViewBag.Error
+                                                    </div>
+                                                }
+                                                
+                                            </div>
+                                            <form class="theme-form" method="post" action="@Url.Action("Register","UserAccount")" enctype="multipart/form-data">
+                                                <div class="form-group">
+                                                    <label class="col-form-label pt-0">Username</label>
+                                                    <input name="Username" class="form-control" type="text">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="col-form-label pt-0">Email</label>
+                                                    <input name="Email" class="form-control" type="text">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="col-form-label">Password</label>
+                                                    <input name="Password" class="form-control" type="password">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="col-form-label">Confirm Password</label>
+                                                    <input name="ConfirmPassword" class="form-control" type="password">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="col-form-label">User Photo</label>
+                                                    <input name="Photo" type="file" class="form-control">
+                                                </div>
+
+                                                <div class="form-group form-row mt-3 mb-0">
+                                                    <button class="btn btn-primary btn-block" type="submit">Register</button>
+                                                </div>
+                                                <div class="form-group form-row mt-3 mb-0">
+                                                    <a class="btn btn-success btn-block" href="@Url.Action("Login","UserAccount")">
+                                                        Login
+                                                    </a>
+                                                </div>
+                                                <div class="login-divider"></div>
+
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- login page end-->
+            </div>
+        </div>
+    </div>
