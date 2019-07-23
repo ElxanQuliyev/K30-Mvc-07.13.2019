@@ -26,6 +26,10 @@ namespace _07._13_2019_mvc_k30.Controllers
 
             return View(defaultModel);
         }
+        public ActionResult Blog()
+        {
+            return View();
+        }
         public ActionResult BlogDetail(int? id)
         {
             ViewBag.BlogSingle = db.RecentNewsTBs.FirstOrDefault(bl => bl.Id == id);

@@ -973,6 +973,7 @@
     <Content Include="Views\Home\ProjectDetail.cshtml" />
     <Content Include="Views\Shared\_blogList.cshtml" />
     <Content Include="Views\Home\BlogDetail.cshtml" />
+    <Content Include="Views\Home\Blog.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
